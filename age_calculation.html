@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-eqiv="X-UA-compatible" content="IE=Rdge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>age_calculation</title>
+	<link rel="stylesheet" href="age_calculation.css">
+</head>
+<body>
+	
+	   
+	<!-- var dob = new Date("09/01/2001");   -->
+  
+    <!-- var month_diff = Date.now() - dob.getTime();   -->
+      
+    <!-- var age_dt = new Date(month_diff);    -->
+      
+    <!-- var year = age_dt.getUTCFullYear();   -->
+      
+    <!-- var age = Math.abs(year - 1970);   -->
+       
+    <!-- document.write(age + " years old");   -->
+	
+	
+	<input type="date" id="day" /> 
+	
+   <button id=""  onclick="myFun()" >Click</button>
+   
+  <script>
+     function myFun(){
+
+     var input = document.getElementById("day").value;  
+	 
+	 var birth = new Date(input);
+	 
+	 var difference= Date.now() - birth.getTime(); 
+	 	 
+	 var  ageDate = new Date(difference); 
+	 
+	 var calculated=   Math.abs(ageDate.getUTCFullYear() - 1970);
+	 
+	 alert("your age is: " +calculated);
+}
+
+	
+	</script>
+
+</body>
+</html>
